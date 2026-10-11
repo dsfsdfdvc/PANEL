@@ -1,0 +1,17 @@
+# فایل کانفیگ‌های V2Ray
+# هر کانفیگ را می‌توانید در چند خط بنویسید
+# فقط بین کانفیگ‌ها یک خط خالی بگذارید
+# خطوطی که با # شروع می‌شوند نادیده گرفته می‌شوند
+
+# مثال:
+# vmess://eyJ2IjoiMiIsInBzIjoiLi4uIn0=
+
+# vless://uuid@server:port?encryption=none&security=tls&type=ws&path=%2F#name
+
+# trojan://password@server:port?security=tls&type=ws&path=%2F#name
+
+# ss://method:password@server:port#name
+
+# --- کانفیگ‌های خود را از اینجا اضافه کنید ---
+
+vless://5cb55c9a-636c-47b1-ae2b-f0da2bb9f31a@103.21.244.244:2053?encryption=none&security=tls&sni=fRagraNT-RIVer-4A57.sHayaNmoNAvarY1404-B3A.WoRKERS.dEV&fp=chrome&alpn=http%2F1.1&type=ws&host=fragrant-river-4a57.shayanmonavary1404-b3a.workers.dev&path=%2FeyJqdW5rIjoiTHFIbzhYVWZYIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ%3D%3D%3Fed%3D2560#%F0%9F%92%A6%20110%20-%20VLESS%20-%20Clean%20IP%20%3A%202053

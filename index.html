@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sh.M V2Ray - سابسکریپشن استاتیک V2Ray روی GitHub Pages" />
+  <meta name="theme-color" content="#0f1117" />
+  <title>Sh.M V2Ray</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sh.M <span>V2Ray</span></h1>
+    <p>سابسکریپشن استاتیک · بدون سرور · رایگان روی GitHub Pages</p>
+  </header>
+
+  <main>
+    <!-- Status messages -->
+    <div id="status" class="loading">⏳ در حال بارگذاری...</div>
+
+    <!-- Stats -->
+    <div class="card" id="stats-card">
+      <h2><span class="icon">📊</span> وضعیت</h2>
+      <div class="stats" id="stats" style="display: none;">
+        <div class="stat-item">
+          <div class="label">تعداد کانفیگ</div>
+          <div class="value" id="config-count">0</div>
+        </div>
+      </div>
+      <div id="config-list" aria-label="پیش‌نمایش کانفیگ‌ها"></div>
+    </div>
+
+    <!-- Subscription content -->
+    <div class="card">
+      <h2><span class="icon">🔗</span> محتوای سابسکریپشن (Base64)</h2>
+      <p class="hint" style="margin-bottom: 0.75rem;">
+        این متن همان فرمت استاندارد سابسکریپشن است. می‌توانید آن را مستقیماً کپی کنید یا فایل را دانلود نمایید.
+      </p>
+      <div class="sub-box" id="sub-content" dir="ltr">—</div>
+      <div class="btn-group">
+        <button type="button" class="btn-primary" id="btn-copy-sub" disabled>
+          📋 کپی Base64
+        </button>
+        <button type="button" class="btn-secondary" id="btn-download" disabled>
+          ⬇️ دانلود فایل <code>sub</code>
+        </button>
+      </div>
+    </div>
+
+    <!-- Permanent public link -->
+    <div class="card">
+      <h2><span class="icon">🌐</span> لینک دائمی سابسکریپشن</h2>
+      <p class="hint">
+        برای استفاده در کلاینت‌های V2Ray (مثل v2rayNG، Streisand، Hiddify و ...) باید یک فایل استاتیک به نام
+        <strong>sub</strong> در ریشهٔ مخزن داشته باشید که محتوای Base64 بالا در آن قرار گرفته باشد.
+      </p>
+      <p class="hint" style="margin-top: 0.6rem;">
+        پس از قرار دادن فایل <code>sub</code> و Push کردن، لینک زیر را در کلاینت وارد کنید:
+      </p>
+      <div class="link-template" id="permanent-link" dir="ltr">
+        https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/sub
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn-success" id="btn-copy-link">
+          📋 کپی لینک
+        </button>
+      </div>
+      <p class="hint" style="margin-top: 1rem;">
+        <strong>نکته مهم:</strong> هر بار که <code>configs.txt</code> را تغییر می‌دهید، صفحه را رفرش کنید،
+        Base64 جدید را کپی یا دانلود کنید و فایل <code>sub</code> را در مخزن به‌روزرسانی کنید.
+        بدون این کار لینک دائمی قدیمی می‌ماند.
+      </p>
+    </div>
+
+    <!-- How to use -->
+    <div class="card">
+      <h2><span class="icon">📖</span> نحوه استفاده در کلاینت</h2>
+      <ol style="padding-right: 1.2rem; color: var(--text-secondary); font-size: 0.9rem;">
+        <li style="margin-bottom: 0.4rem;">لینک دائمی را کپی کنید (یا محتوای Base64 را).</li>
+        <li style="margin-bottom: 0.4rem;">در کلاینت به بخش Subscription / سابسکریپشن بروید.</li>
+        <li style="margin-bottom: 0.4rem;">لینک را Paste کنید و Update / به‌روزرسانی را بزنید.</li>
+        <li>کانفیگ‌ها ظاهر می‌شوند و آماده اتصال هستند.</li>
+      </ol>
+    </div>
+  </main>
+
+  <footer>
+    Sh.M V2Ray · پروژهٔ کاملاً استاتیک · منتشر شده روی GitHub Pages
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
